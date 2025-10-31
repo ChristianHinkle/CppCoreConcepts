@@ -3,9 +3,9 @@
 #pragma once
 
 #include <type_traits>
-#include <concepts>
+#include <concepts> // @Christian: TODO: [todo][concept] Eliminate this include path. See: `CppCoreConcepts::Std`.
 
-namespace CppCoreConcepts::Concepts
+namespace CppCoreConcepts
 {
     template <class T>
     concept Pointer = std::is_pointer_v<T>;
