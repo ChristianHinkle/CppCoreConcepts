@@ -27,6 +27,7 @@ target_compile_features(IncludeCompileTest PUBLIC cxx_std_20)
 target_sources(IncludeCompileTest PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Source/IncludeCompileTest.cpp")
 target_link_libraries(IncludeCompileTest PRIVATE ${MY_BASE_PROJECT_NAME_NAMESPACE}::${MY_BASE_PROJECT_NAME_LEAFNAME}::Include)
 
+# This test simply ensures that our header files' code compiles successfully when included in a cpp file.
 add_test(
   NAME CppCoreConcepts.IncludeCompileTest
   COMMAND ${CMAKE_COMMAND}
