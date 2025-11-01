@@ -3,7 +3,7 @@
 #pragma once
 
 #include <type_traits>
-#include <concepts> // @Christian: TODO: [todo][concept] Eliminate this include path. See: `CppCoreConcepts::Std`.
+#include <CppCoreConcepts/Std.h>
 
 namespace CppCoreConcepts
 {
@@ -28,8 +28,8 @@ namespace CppCoreConcepts
     concept NonLvalueReference = !std::is_lvalue_reference_v<T>;
 
     template <class T, class TBase>
-    concept PointerToDerivedFrom = std::is_pointer_v<T> && std::derived_from<std::remove_pointer_t<T>, TBase>;
+    concept PointerToDerivedFrom = std::is_pointer_v<T> && Std::derived_from<std::remove_pointer_t<T>, TBase>;
 
     template <class T, class TBase>
-    concept ReferenceToDerivedFrom = std::is_reference_v<T> && std::derived_from<std::remove_reference_t<T>, TBase>;
+    concept ReferenceToDerivedFrom = std::is_reference_v<T> && Std::derived_from<std::remove_reference_t<T>, TBase>;
 }
