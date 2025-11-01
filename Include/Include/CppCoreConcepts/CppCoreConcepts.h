@@ -25,11 +25,11 @@ namespace CppCoreConcepts
      *        without the possibility of an lvalue reference being used in that forwarding reference.
      */
     template <class T>
-    concept NonLvalueReference = !std::is_lvalue_reference_v<T>;
+    concept NonLvalueReference = !LvalueReference<T>;
 
     template <class T, class TBase>
-    concept PointerToDerivedFrom = std::is_pointer_v<T> && Std::derived_from<std::remove_pointer_t<T>, TBase>;
+    concept PointerToDerivedFrom = Pointer<T> && Std::derived_from<std::remove_pointer_t<T>, TBase>;
 
     template <class T, class TBase>
-    concept ReferenceToDerivedFrom = std::is_reference_v<T> && Std::derived_from<std::remove_reference_t<T>, TBase>;
+    concept ReferenceToDerivedFrom = Reference<T> && Std::derived_from<std::remove_reference_t<T>, TBase>;
 }
