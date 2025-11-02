@@ -85,8 +85,8 @@ target_sources(${MY_BASE_PROJECT_NAME_FULL}_Include
       BASE_DIRS
         "${CMAKE_CURRENT_SOURCE_DIR}/Include"
       FILES
+        "${CMAKE_CURRENT_SOURCE_DIR}/Include/CppUtils_Concepts.h"
         "${CMAKE_CURRENT_SOURCE_DIR}/Include/${MY_BASE_PROJECT_NAME_FULL}/Std.h"
-        "${CMAKE_CURRENT_SOURCE_DIR}/Include/${MY_BASE_PROJECT_NAME_FULL}/CppUtils_Concepts.h"
   )
 
 # Note that we do not "find package" for our parent project. We don't need to since we are built in the same
