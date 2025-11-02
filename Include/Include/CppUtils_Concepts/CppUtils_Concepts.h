@@ -3,9 +3,9 @@
 #pragma once
 
 #include <type_traits>
-#include <CppCoreConcepts/Std.h>
+#include <CppUtils_Concepts/Std.h>
 
-namespace CppCoreConcepts
+namespace CppUtils::Concepts
 {
     template <class T>
     concept Pointer = std::is_pointer_v<T>;

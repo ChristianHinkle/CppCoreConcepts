@@ -8,7 +8,7 @@
  * @brief Rewrites of the standard library's concepts library. This is necessary for certain
  *        compilers that don't have C++20 standard concepts library enabled, e.g., for PS5.
  */
-namespace CppCoreConcepts::Std
+namespace CppUtils::Concepts::Std
 {
     template <class TDerived, class TBase>
     concept derived_from =
