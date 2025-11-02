@@ -11,5 +11,64 @@
     ],
     "include": [
         "${sourceDir}/GeneralCMakePresets/GeneralPresets.json"
+    ],
+    "testPresets": [
+        {
+            "name": "cpputils-concepts-base",
+            "hidden": true,
+            "filter": {
+                "include": {
+                    "name": "CppUtils.Concepts."
+                }
+            }
+        },
+        {
+            "name": "cpputils-concepts-win-debug",
+            "displayName": "CppUtils.Concepts - Windows Debug",
+            "inherits": [
+                "cpputils-concepts-base",
+                "win-debug"
+            ]
+        },
+        {
+            "name": "cpputils-concepts-win-release",
+            "displayName": "CppUtils.Concepts - Windows Release",
+            "inherits": [
+                "cpputils-concepts-base",
+                "win-release"
+            ]
+        },
+        {
+            "name": "cpputils-concepts-linux-debug",
+            "displayName": "CppUtils.Concepts - Linux Debug",
+            "inherits": [
+                "cpputils-concepts-base",
+                "linux-debug"
+            ]
+        },
+        {
+            "name": "cpputils-concepts-linux-release",
+            "displayName": "CppUtils.Concepts - Linux Release",
+            "inherits": [
+                "cpputils-concepts-base",
+                "linux-release"
+            ]
+        },
+        {
+            "name": "cpputils-concepts-macos-debug",
+            "displayName": "CppUtils.Concepts - macOS Debug",
+            "inherits": [
+                "cpputils-concepts-base",
+                "macos-debug"
+            ]
+        },
+        {
+            "name": "cpputils-concepts-macos-release",
+            "displayName": "CppUtils.Concepts - macOS Release",
+            "inherits": [
+                "cpputils-concepts-base",
+                "macos-release"
+            ]
+        }
     ]
 }
