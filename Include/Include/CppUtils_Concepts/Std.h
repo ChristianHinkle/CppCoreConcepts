@@ -14,4 +14,8 @@ namespace CppUtils::Concepts::Std
     concept derived_from =
         std::is_base_of_v<TBase, TDerived>
         && std::is_convertible_v<const volatile TDerived*, const volatile TBase*>;
+
+    template <class T>
+    concept floating_point =
+        std::is_floating_point_v<T>;
 }
